@@ -1,3 +1,6 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page import="java.util.List" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,19 +12,31 @@
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
 </head>
 
-<body>
+<body class="otherbody">
 
 <header>
-    <a href=""><h1>{ Northwind Webapp }</h1></a>
+    <a href="index.html"><h1>{ Northwind Webapp }</h1></a>
 </header>
 
 <div class="wrapper">
     <div class="container">
         <div class="containerhead">
-            <h3>Northwind Queries</h3>
+            <h3>Query Results</h3>
         </div>
-        <h2>Click the links below to view the results of a specific query</h2>
-        <p><a href="task1">Task 1</a>, <a href="">Task 2</a>, <a href="">Task 3</a>, <a href="">Task 4</a>, <a href="">Task 5</a></p>
+
+         <table>
+         <tr>
+         <th>Product</th>
+         <th>Company</th>
+         </tr>
+         <c:forEach var="item" items="${data}">
+         <tr>
+         <td>${item.getProductName()}</td>
+         <td>${item.getCompanyName()}</td>
+         </tr>
+         </c:forEach>
+         </table>
+
         <div class="containerfoot"/>
     </div>
 </div>
