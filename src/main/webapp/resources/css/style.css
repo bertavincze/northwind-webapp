@@ -4,6 +4,12 @@ body {
      background-size: cover;
      background-repeat: repeat;
 }
+.otherbody {
+     background: url('../images/space_cat_bacon.jpg') #cccccc;
+     background-attachment: center top;
+     background-size: cover;
+     background-repeat: repeat;
+}
  header {
      padding-top: 8%;
      text-align: center;
@@ -83,5 +89,23 @@ body {
 }
  p {
      padding: 5px 5px 10px 5px;
+}
+table {
+  display: inline-block;
+  border-collapse: collapse;
+  width: 100%;
+  overflow-y: scroll;
+  height: 300px;
+}
+th {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
