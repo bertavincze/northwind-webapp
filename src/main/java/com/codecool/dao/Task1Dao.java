@@ -18,7 +18,7 @@ public final class Task1Dao extends AbstractDao {
     public List<Task1> loadQueryData() throws SQLException {
         List<Task1> task1List = new ArrayList<>();
         String sql = "SELECT product_name AS product, company_name AS company " +
-            "FROM products JOIN suppliers ON products.supplier_id = suppliers.supplier_id ORDER BY product ASC;";
+            "FROM products JOIN suppliers ON products.supplier_id = suppliers.supplier_id ORDER BY product ASC";
         try (Statement statement = connection.createStatement(); ResultSet resultSet = statement.executeQuery(sql)) {
             while (resultSet.next()) {
                 Task1 task = new Task1(
