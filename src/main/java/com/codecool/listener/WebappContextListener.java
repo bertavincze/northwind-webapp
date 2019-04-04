@@ -60,12 +60,12 @@ public final class WebappContextListener implements ServletContextListener {
             database connection is automatically closed at the end of the try-catch
             block.
         */
-        try (Connection connection = dataSource.getConnection()) {
+        /*try (Connection connection = dataSource.getConnection()) {
             ScriptUtils.executeSqlScript(connection, new ClassPathResource(resource));
         } catch (Throwable t) {
             t.printStackTrace();
             throw new IllegalStateException(t);
-        }
+        }*/
         /*
             Doing this is basically it's equivalent to this
 
