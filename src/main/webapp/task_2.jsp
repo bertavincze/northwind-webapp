@@ -23,7 +23,12 @@
         <div class="containerhead">
             <h3>Query Results</h3>
         </div>
-
+         <form action="task2" method="POST">
+                     <p>Enter a company name: </p>
+                     <input type="text" name="company">
+                     <br>
+                     <input type="submit" value="Filter results">
+                 </form>
          <table>
          <tr>
          <th>Company</th>
