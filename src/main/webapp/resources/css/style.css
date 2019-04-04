@@ -108,4 +108,19 @@ td {
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
+input[type=text] {
+  width: 40%;
+  padding: 8px;
+  margin: 5px 5px 10px 5px;
+  box-sizing: border-box;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4286f4;
+  border: none;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  margin: 5px 5px 10px 5px;
+  cursor: pointer;
+}
 
