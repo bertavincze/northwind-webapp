@@ -32,10 +32,12 @@ public final class Task2Servlet extends AbstractServlet {
         try (Connection connection = getConnection(req.getServletContext())) {
             Task2Dao task2Dao = new Task2Dao(connection);
             Task2Service task2Service = new Task2Service(task2Dao);
+            String companyName = req.getParameter("company");
+            req.setAttribute("data", task2Service.loadFilteredData(companyName));
 
         } catch (SQLException ex) {
             throw new ServletException(ex);
         }
-        doGet(req, resp);
+        req.getRequestDispatcher("task_2.jsp").forward(req, resp);
     }
 }

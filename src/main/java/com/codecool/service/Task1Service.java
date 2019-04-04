@@ -17,4 +17,8 @@ public final class Task1Service {
     public List<Task1> loadTask1Data() throws SQLException {
         return task1Dao.loadQueryData();
     }
+
+    public List<Task1> loadFilteredData(String companyName) throws SQLException {
+        return task1Dao.loadFilteredData(companyName);
+    }
 }

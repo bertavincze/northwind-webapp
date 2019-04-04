@@ -18,4 +18,8 @@ public class Task3Service {
         return task3Dao.loadQueryData();
     }
 
+    public List<Task3> loadFilteredData(String companyName) throws SQLException {
+        return task3Dao.loadFilteredData(companyName);
+    }
+
 }

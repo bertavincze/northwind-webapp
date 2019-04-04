@@ -32,10 +32,12 @@ public final class Task5Servlet extends AbstractServlet {
         try (Connection connection = getConnection(req.getServletContext())) {
             Task5Dao task5Dao = new Task5Dao(connection);
             Task5Service task5Service = new Task5Service(task5Dao);
+            String companyName = req.getParameter("company");
+            req.setAttribute("data", task5Service.loadFilteredData(companyName));
 
         } catch (SQLException ex) {
             throw new ServletException(ex);
         }
-        doGet(req, resp);
+        req.getRequestDispatcher("task_5.jsp").forward(req, resp);
     }
 }
